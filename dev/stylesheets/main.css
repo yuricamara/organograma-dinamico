@@ -44,7 +44,7 @@ body {
 	margin: 0 auto;
 }
 
-aside.organograma {
+.organograma.organograma-infos {
 	position: absolute;
 	width: 560px;
 	left: 10px;
@@ -55,7 +55,7 @@ aside.organograma {
 	margin: 0 auto;
 }
 
-header > h1 {
+.wrap-titulo-pagina > h1 {
 	font-size: 28px;
 	margin: 20px auto;
 	width: 430px;
@@ -80,7 +80,8 @@ header > h1 {
 	background: transparent url("../images/sprite.png") center 0 no-repeat;
 }
 
-.organograma .organagroma-exemplo-base ul,.organograma .organagroma-exemplo-base {
+.organograma .organograma-exemplo-base ul,
+.organograma .organograma-exemplo-base {
 	margin: 0;
 	padding-top: 40px;
 	position: relative;
@@ -99,7 +100,7 @@ header > h1 {
 	font-style: italic;
 }
 
-.organagroma-exemplo-base li {
+.organograma-exemplo-base li {
 	z-index: -1;
 }
 
@@ -190,7 +191,7 @@ header > h1 {
 	border: 1px solid #EED30B;
 }
 
-.organograma .organagroma-exemplo-base > li:first-child {
+.organograma .organograma-exemplo-base > li:first-child {
 	margin-bottom: 10px;
 }
 

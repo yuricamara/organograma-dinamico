@@ -342,6 +342,11 @@ var jsonOrgan = [{
     pai: 54
 }];
 
+var $organogramaEx = $("#organograma-exemplo"),
+    fnShowHide,
+    fnOffset,
+    fnTamanhoHorizontal;
+
 (function createDOM() {
     var ul, li, div, docfrag, i = 0;
     for (var property in jsonOrgan) {
@@ -367,34 +372,49 @@ var jsonOrgan = [{
     }
 })();
 
-var $organogramaEx = $("#organograma-exemplo"),
-    fnShowHide,
-    offset;
-
-function tamanhoHorizontal() {
+fnTamanhoHorizontal = function () {
     var l = [];
-    $organogramaEx.css("width", 1e4);
-    $organogramaEx.find("ul").not(".hide").each(function(i) {
-        l[i] = $(this).width()
+    $organogramaEx
+        .css("width", 1e4);
+    $organogramaEx
+        .find("ul")
+        .not(".hide")
+        .each(function(i) {
+            l[i] = $(this).width()
     });
     l.sort(function(a, b) {
         return a - b
     });
     l.pop();
-    $organogramaEx.css("width", l.pop())
+    $organogramaEx
+        .css("width", l.pop())
 }
 
 fnShowHide = function(element) {
-    element.toggleClass("mais").toggleClass("menos");
-    element.siblings("ul").toggleClass("hide");
-    $(".hightlight").removeClass("hightlight");
-    element.prevAll(".wrap-infos").addClass("hightlight")
+    element
+        .toggleClass("mais")
+        .toggleClass("menos");
+    element
+        .siblings("ul")
+        .toggleClass("hide");
+    $(".hightlight")
+        .removeClass("hightlight");
+    element
+        .prevAll(".wrap-infos")
+        .addClass("hightlight");
 };
 
-offset = function($btn) {
+fnOffset = function($btn) {
     var l, t;
-    l = $btn.prevAll(".wrap-infos").offset().left;
-    t = $btn.prevAll(".wrap-infos").offset().top;
+    l = $btn
+            .prevAll(".wrap-infos")
+            .fnOffset()
+            .left;
+    t = $btn
+            .prevAll(".wrap-infos")
+            .fnOffset()
+            .top;
+
     setTimeout(function() {
         $(document).scrollLeft(l - $(window).width() / 2 + 60);
         $(document).scrollTop(t)
@@ -405,8 +425,8 @@ $organogramaEx.find(".zoom").each(function() {
     var $thisButton = $(this);
     $thisButton.on("click", function() {
         fnShowHide($thisButton);
-        tamanhoHorizontal();
-        offset($thisButton)
+        fnTamanhoHorizontal();
+        fnOffset($thisButton)
     })
 });
 
@@ -424,10 +444,11 @@ $(".organograma li:only-child")
 $("#ul-1,#ul-2")
 	.removeClass("hide");
 
-tamanhoHorizontal();
+fnTamanhoHorizontal();
 
 $(".organograma-infos-base .zoom").on("click", function() {
-    $(".organograma-infos-base").toggleClass("width-auto")
+    $(".organograma-infos-base")
+        .toggleClass("width-auto")
 });
 
 $("aside.organograma")
