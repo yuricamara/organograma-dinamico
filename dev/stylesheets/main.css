@@ -1,0 +1,241 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+blockquote,q {
+	quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	background: transparent url("../images/bg.jpg") 0 0 repeat;
+	font: 12px arial,verdana,tahoma,sans-serif;
+	color: #CECECE;
+}
+
+.main {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.organograma.organograma-infos {
+	position: absolute;
+	width: 560px;
+	left: 10px;
+	display: none;
+}
+
+.organograma {
+	margin: 0 auto;
+}
+
+.wrap-titulo-pagina > h1 {
+	font-size: 28px;
+	margin: 20px auto;
+	width: 430px;
+	border-top: 3px double #CECECE;
+	border-bottom: 3px double #CECECE;
+	text-align: center;
+	padding: 3px 0;
+}
+
+.organograma .zoom {
+	cursor: pointer;
+	height: 16px;
+	margin: 0 auto;
+	width: 17px;
+}
+
+.organograma .zoom.menos {
+	background: transparent url("../images/sprite.png") center -20px no-repeat;
+}
+
+.organograma .zoom.mais {
+	background: transparent url("../images/sprite.png") center 0 no-repeat;
+}
+
+.organograma .organograma-exemplo-base ul,
+.organograma .organograma-exemplo-base {
+	margin: 0;
+	padding-top: 40px;
+	position: relative;
+}
+
+.organograma ul.hide {
+	display: none;
+}
+
+.organograma .nome {
+	margin-bottom: 5px;
+}
+
+.organograma .cargo {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.organograma-exemplo-base li {
+	z-index: -1;
+}
+
+.organograma li {
+	float: left;
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 40px 0 0;
+}
+
+.organograma li:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	border-top: 1px solid #DBDBDB;
+	width: 50%;
+	height: 40px;
+}
+
+.organograma li:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	left: 50%;
+	border-left: 1px solid #DBDBDB;
+	border-top: 1px solid #DBDBDB;
+	width: 50%;
+	height: 40px;
+}
+
+.organograma .filho-unico:after {
+	display: none;
+}
+
+.organograma .filho-unico:before {
+	display: none;
+}
+
+.organograma .filho-unico {
+	padding: 0;
+}
+
+.organograma li:first-child:before {
+	border: 0 none;
+}
+
+.organograma .ultimo-filho:after {
+	border: 0 none;
+}
+
+.organograma .ultimo-filho:before {
+	border-right: 1px solid #DBDBDB;
+	border-radius: 0 5px 0 0;
+}
+
+.organograma li:first-child:after {
+	border-radius: 5px 0 0 0;
+}
+
+.organograma ul ul:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	border-left: 1px solid #DBDBDB;
+	width: 0;
+	height: 40px;
+}
+
+.organograma .wrap-infos {
+	border: 1px solid #DBDBDB;
+	padding: 5px;
+	display: inline-block;
+	border-radius: 5px;
+	cursor: default;
+	margin: 0 5px;
+}
+
+.organograma .wrap-infos-padrao {
+	min-height: 50px;
+	width: 120px;
+}
+
+.organograma .hightlight {
+	border: 1px solid #EED30B;
+}
+
+.organograma .organograma-exemplo-base > li:first-child {
+	margin-bottom: 10px;
+}
+
+.organograma-infos-base {
+	padding-top: 40px;
+	position: relative;
+}
+
+.organograma-infos-base ul {
+	margin: 0;
+	padding-top: 40px;
+	position: relative;
+}
+
+.width-auto {
+	width: auto;
+}
+
+.texto-bloco1 {
+	line-height: 50px;
+	font-size: 22px;
+}
+
+.meta-bloco2 {
+	float: left;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.dado-bloco2 {
+	float: right;
+	width: 80%;
+}
+
+.wrap-infos-estilo1 p {
+	text-align: left;
+	height: 25px;
+	padding: 5px;
+}
+
+.wrap-infos-estilo1 p.ultimo-paragrafo {
+	height: 15px;
+}
+
+.wrap-infos-estilo1 a {
+	color: #CECECE;
+}

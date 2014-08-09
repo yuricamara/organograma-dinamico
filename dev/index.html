@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+        <meta charset="utf-8">
+        <meta name="description" content="Demo de app que constrói um organograma dinâmico a partir de um JSON">
+        <link rel="stylesheet" href="stylesheets/main.css">
+        <!--[if lt IE 9]>
+              <script src="browsers/IE/html5shiv.min.js"></script>
+        <![endif]-->
+        <noscript>
+            <style type="text/css">
+              .noscript-aviso{
+                text-indent: 16px;
+                font-size: 24px;
+                padding: 20px;
+              }
+              .noscript-aviso a {
+                color: #CCC;
+                text-decoration: underline;
+              }
+              .organograma{
+                display: none;
+              }
+            </style>
+        </noscript>
+        <title>
+            Projeto Organograma Dinâmico
+        </title>
+    </head>
+
+    <body>
+        <div class="main">
+            <header class="wrap-titulo-pagina">
+                <h1>Projeto Organograma Dinâmico</h1>
+            </header>
+            <aside id="organograma-infos" class="organograma organograma-infos">
+				<ul class="organograma-infos-base">
+					<li>
+                        <div class="wrap-infos">
+					       <p class="texto-bloco1">Informações</p>
+                        </div>
+					    <div class="zoom mais"></div>
+					    <ul class="hide">
+					        <li>
+					            <div class="wrap-infos wrap-infos-estilo1">
+                                    <p>
+                                        <span class="meta-bloco2">Descrição:</span>
+                                        <span class="dado-bloco2">Aplicação que recebe dados no formato JSON, os trata via Javascript e os mostra na forma de um organograma.</span>
+                                    </p>
+                                    <p>
+                                        <span class="meta-bloco2">Finalidade:</span>
+                                        <span class="dado-bloco2">Intranet (*) do Grupo Sotreq, revendedora de produtos, serviços e sistemas Caterpillar.</span>
+                                    </p>
+                                    <p>
+                                        <span class="meta-bloco2">Dados Técnicos:</span>
+                                        <span class="dado-bloco2">DOM criado com Javascript puro e manipulado com jQuery sem uso de plugins. IE8+.</span>
+                                    </p>
+                                    <p>
+                                        <span class="meta-bloco2">Desenvolvedor:</span>
+                                        <span class="dado-bloco2">Yuri Câmara Fernandes.<br><a href="http://www.yuricamara.com.br/">www.yuricamara.com.br</a></span>
+                                    </p>
+					            	<p class="ultimo-paragrafo">
+										(*) Todos os nomes e cargos mostrados no exemplo desta pagina são fictícios.
+                                    </p>
+                                </div>
+					        </li>
+					    </ul>
+					</li>
+				</ul>
+            </aside>
+            <section id="organograma-exemplo" class="organograma">
+                <ul id="ul-0" class="organograma-exemplo-base">
+                </ul>
+                <!-- Não deixar espaço vazio dentro -->
+            </section>
+        </div>
+        <noscript>
+            <p class="noscript-aviso">O JavaScript tem que ser ativado para que você possa visualizar esta página corretamente. Porém, aparentemente, o JavaScript está desativado ou é incompatível com o seu navegador. Ative o JavaScript alterando as opções do navegador e <a href="http://www.yuricamara.com.br/">tente novamente</a>.</p>
+        </noscript>
+        <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script>
+            !window.jQuery && document.write('<script src="vendors/jquery-1.9.1.min.js"><\/script>')
+        </script>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
