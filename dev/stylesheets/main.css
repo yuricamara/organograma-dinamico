@@ -11,29 +11,12 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 	display: block;
 }
 
-body {
-	line-height: 1;
-}
-
 ol,ul {
 	list-style: none;
 }
 
-blockquote,q {
-	quotes: none;
-}
-
-blockquote:before,blockquote:after,q:before,q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 body {
+	line-height: 1;
 	background: transparent url("../images/bg.jpg") 0 0 repeat;
 	font: 12px arial,verdana,tahoma,sans-serif;
 	color: #CECECE;
@@ -41,17 +24,6 @@ body {
 
 .main {
 	width: 100%;
-	margin: 0 auto;
-}
-
-.organograma.organograma-infos {
-	position: absolute;
-	width: 560px;
-	left: 10px;
-	display: none;
-}
-
-.organograma {
 	margin: 0 auto;
 }
 
@@ -63,6 +35,10 @@ body {
 	border-bottom: 3px double #CECECE;
 	text-align: center;
 	padding: 3px 0;
+}
+
+.organograma {
+	margin: 0 auto;
 }
 
 .organograma .zoom {
@@ -100,7 +76,7 @@ body {
 	font-style: italic;
 }
 
-.organograma-exemplo-base li {
+.organograma > .organograma-exemplo-base li {
 	z-index: -1;
 }
 
@@ -193,49 +169,4 @@ body {
 
 .organograma .organograma-exemplo-base > li:first-child {
 	margin-bottom: 10px;
-}
-
-.organograma-infos-base {
-	padding-top: 40px;
-	position: relative;
-}
-
-.organograma-infos-base ul {
-	margin: 0;
-	padding-top: 40px;
-	position: relative;
-}
-
-.width-auto {
-	width: auto;
-}
-
-.texto-bloco1 {
-	line-height: 50px;
-	font-size: 22px;
-}
-
-.meta-bloco2 {
-	float: left;
-	font-weight: bold;
-	font-style: italic;
-}
-
-.dado-bloco2 {
-	float: right;
-	width: 80%;
-}
-
-.wrap-infos-estilo1 p {
-	text-align: left;
-	height: 25px;
-	padding: 5px;
-}
-
-.wrap-infos-estilo1 p.ultimo-paragrafo {
-	height: 15px;
-}
-
-.wrap-infos-estilo1 a {
-	color: #CECECE;
 }
