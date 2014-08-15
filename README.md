@@ -1,8 +1,9 @@
 Organograma Dinâmico
 ====================
 
-[Demo][1] de uma app que recebe dados do backend em formato JSON, trata-os via Javascript e mostra-os na forma de um organograma.
+Demo de uma app que recebe dados do backend em formato JSON, trata-os via Javascript e mostra-os na forma de um organograma.
 
+[Clique aqui][1] para exibir demo da app.
 
 Especificações
 --------------
