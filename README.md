@@ -1,16 +1,30 @@
 Organograma Dinâmico
 ====================
 
-App que recebe dados do backend em formato JSON, trata-os via Javascript e mostra-os na forma de um organograma.
+[Demo][1] de uma app que recebe dados do backend em formato JSON, trata-os via Javascript e mostra-os na forma de um organograma.
 
-Demo: www.yuricamara.com.br
 
-Finalidade: Intranet do Grupo Sotreq, revendedora de produtos, serviços e sistemas Caterpillar.
+Especificações
+--------------
 
-Especificações: DOM criado com Javascript puro e manipulado com jQuery sem uso de plugins, outras bibliotecas ou frameworks.
+ - DOM criado com Javascript puro e manipulado com jQuery.
+ - Sem uso adicional de plugins, bibliotecas ou frameworks.
 
-Suporte: navegadores modernos e IE8+.
+Compatibilidade
+---------------
 
-Desenvolvedor: Yuri Câmara Fernandes
+Navegadores modernos e IE8+.
 
-Todos os nomes e cargos mostrados neste app são fictícios.
+Desenvolvedor (Front-end)
+-------------
+
+***Yuri Câmara***
+[yuricamara.com.br][2]
+[@ycamara][3]
+
+----------
+**O organograma exibido é fictício.**
+
+  [1]: http://www.yuricamara.com.br/projetos/organograma/index.html "www.yuricamara.com.br/projetos/organograma/"
+  [2]: http://www.yuricamara.com.br "yuricamara.com.br"
+  [3]: https://twitter.com/ycamara "twitter.com/ycamara"
