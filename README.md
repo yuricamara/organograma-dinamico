@@ -9,6 +9,7 @@ Especificações
 
  - DOM criado com Javascript puro e manipulado com jQuery.
  - Sem uso adicional de plugins, bibliotecas ou frameworks.
+ - Demo com um exemplo fictício de JSON que na app em produção vem do backend.
 
 Compatibilidade
 ---------------
@@ -18,12 +19,7 @@ Navegadores modernos e IE8+.
 Desenvolvedor (Front-end)
 -------------
 
-***Yuri Câmara***
-[yuricamara.com.br][2]
-[@ycamara][3]
-
-----------
-**O organograma exibido é fictício.**
+***Yuri Câmara*** ( [yuricamara.com.br][2] / [@ycamara][3])
 
   [1]: http://www.yuricamara.com.br/projetos/organograma/index.html "www.yuricamara.com.br/projetos/organograma/"
   [2]: http://www.yuricamara.com.br "yuricamara.com.br"
