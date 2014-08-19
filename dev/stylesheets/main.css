@@ -17,7 +17,7 @@ ol,ul {
 
 body {
 	line-height: 1;
-	background: transparent url("../images/bg.jpg") 0 0 repeat;
+	background: #333 url("../images/bg.jpg") 0 0 repeat;
 	font: 12px arial,verdana,tahoma,sans-serif;
 	color: #CECECE;
 }
