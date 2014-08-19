@@ -1,5 +1,5 @@
 *.sublime-project
 *.sublime-workspace
-node_modules/
+dist/
 *.map
-ga.html
+
