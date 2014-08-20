@@ -404,15 +404,17 @@ fnShowHide = function(element) {
         .addClass("hightlight");
 };
 
+
+//Colocar elemento selecionado o mais próximo possível do centro da tela
 fnOffset = function($btn) {
     var l, t;
     l = $btn
             .prevAll(".wrap-infos")
-            .fnOffset()
+            .offset()
             .left;
     t = $btn
             .prevAll(".wrap-infos")
-            .fnOffset()
+            .offset()
             .top;
 
     setTimeout(function() {
