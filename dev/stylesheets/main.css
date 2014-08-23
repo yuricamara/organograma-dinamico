@@ -44,16 +44,39 @@ body {
 .organograma .zoom {
 	cursor: pointer;
 	height: 16px;
+	width: 16px;
 	margin: 0 auto;
-	width: 17px;
+	border-radius: 8px;
+	background: #CCB824;
+	position: relative;
 }
 
-.organograma .zoom.menos {
-	background: transparent url("../images/sprite.png") center -20px no-repeat;
+.organograma .zoom > .barrahorizontal,
+.organograma .zoom > .barravertical {
+	background: #000;
+	position: absolute;
 }
 
-.organograma .zoom.mais {
-	background: transparent url("../images/sprite.png") center 0 no-repeat;
+.organograma .zoom > .barrahorizontal {
+	right: 2px;
+	left: 2px;
+
+	bottom: 7px;
+	top: 7px;
+}
+
+.organograma .zoom > .barravertical {
+	right: 7px;
+	left: 7px;
+
+	bottom: 2px;
+	top: 2px;
+
+	display:none;
+}
+
+.organograma .zoom.mais > .barravertical{
+	display: block;
 }
 
 .organograma .organograma-exemplo-base ul,

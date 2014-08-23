@@ -355,16 +355,44 @@ var $organogramaEx = $("#organograma-exemplo"),
                 docfrag = document.createDocumentFragment();
                 i++;
                 if (i > 2) {
-                    div = document.createElement("div");
-                    div.setAttribute("class", "zoom mais");
-                    docfrag.appendChild(div)
+                    //var divZoom
+                    //<div class="zoom mais"></div>
+                    divZoom = document.createElement("div");
+                    divZoom.setAttribute("class", "zoom mais");
+
+                    //var divBarraHorizontal
+                    //<div class="barrahorizontal"></div>
+                    divBarraHorizontal = document.createElement("div");
+                    divBarraHorizontal.setAttribute("class","barrahorizontal");
+                    divZoom.appendChild(divBarraHorizontal);
+
+                    //var divBarraVertical
+                    //<div class="barravertical"></div>
+                    divBarraVertical = document.createElement("div");
+                    divBarraVertical.setAttribute("class","barravertical");
+                    divZoom.appendChild(divBarraVertical);
+
+                    //var divZoom
+                    // <div class="zoom mais">
+                        // <div class="barrahorizontal"></div>
+                        // <div class="barravertical"></div>
+                    // </div>
+
+                    docfrag.appendChild(divZoom)
                 }
+
+                //var ul
+                //<ul id="ul-" + jsonOrgan[property].pai" class="hide"></ul>
                 ul = document.createElement("ul");
                 ul.setAttribute("id", "ul-" + jsonOrgan[property].pai);
                 ul.setAttribute("class", "hide");
                 docfrag.appendChild(ul);
+
                 document.getElementById("li-" + jsonOrgan[property].pai).appendChild(docfrag)
             }
+
+            //var li
+            //<li id="li-" + jsonOrgan[property].idcargo></li>
             li = document.createElement("li");
             li.setAttribute("id", "li-" + jsonOrgan[property].idcargo);
             document.getElementById("ul-" + jsonOrgan[property].pai).appendChild(li).innerHTML = '<div class="wrap-infos wrap-infos-padrao">' + '<p class="nome">' + jsonOrgan[property].nome + "</p>" + '<p class="cargo">' + jsonOrgan[property].cargo + "</p>" + "</div>"
