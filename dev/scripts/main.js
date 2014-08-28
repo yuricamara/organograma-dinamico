@@ -1,3 +1,7 @@
+/***************************************************************************
+    Exemplo JSON vindo do Server
+***************************************************************************/
+
 var jsonOrgan = [{
     "id": 15,
     "cargo": "Presidente",
@@ -342,6 +346,10 @@ var jsonOrgan = [{
     "pai": 54
 }];
 
+/***************************************************************************
+    Criação do fluxograma no DOM
+***************************************************************************/
+
 var $organogramaEx = $("#organograma-exemplo"),
     fnShowHide,
     fnOffset,
@@ -400,6 +408,10 @@ var $organogramaEx = $("#organograma-exemplo"),
     }
 })();
 
+/***************************************************************************
+    Tamanho horizontal (scrollbar) da tela
+ ***************************************************************************/
+
 fnTamanhoHorizontal = function () {
     var l = [];
     $organogramaEx
@@ -418,6 +430,10 @@ fnTamanhoHorizontal = function () {
         .css("width", l.pop())
 }
 
+/***************************************************************************
+    Click nos Botões de Zoom
+***************************************************************************/
+
 fnShowHide = function(element) {
     element
         .toggleClass("mais")
@@ -433,7 +449,10 @@ fnShowHide = function(element) {
 };
 
 
-//Colocar elemento selecionado o mais próximo possível do centro da tela
+/***************************************************************************
+    Alinhando o ramo ativo mais próximo do centro da tela.
+   ***************************************************************************/
+
 fnOffset = function($btn) {
     var l, t;
     l = $btn
@@ -467,19 +486,20 @@ $("#organograma-infos").find(".zoom").each(function() {
     })
 });
 
+/***************************************************************************
+    Seletores Adicionais
+   ***************************************************************************/
+
 $(".organograma li:last-child")
 	.addClass("ultimo-filho");
 $(".organograma li:only-child")
 	.addClass("filho-unico");
+
+/***************************************************************************
+    Ramos a mostrar logo após carregamento da página
+   ***************************************************************************/
+
 $("#ul-1,#ul-2")
 	.removeClass("hide");
 
 fnTamanhoHorizontal();
-
-$(".organograma-infos-base .zoom").on("click", function() {
-    $(".organograma-infos-base")
-        .toggleClass("width-auto")
-});
-
-$("aside.organograma")
-	.show();
