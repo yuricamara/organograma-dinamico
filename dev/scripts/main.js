@@ -415,7 +415,7 @@ var $organogramaEx = $("#organograma-exemplo"),
 fnTamanhoHorizontal = function () {
     var l = [];
     $organogramaEx
-        .css("width", 1e4);
+        .css("width", 10000);
     $organogramaEx
         .find("ul")
         .not(".hide")
