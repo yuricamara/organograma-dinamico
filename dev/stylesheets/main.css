@@ -1,3 +1,7 @@
+/***************************************************************************
+    CSS Reset
+   ***************************************************************************/
+
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
 	margin: 0;
 	padding: 0;
@@ -15,6 +19,10 @@ ol,ul {
 	list-style: none;
 }
 
+/***************************************************************************
+    Estrutura Básica
+   ***************************************************************************/
+
 body {
 	line-height: 1;
 	background: #333 url("../images/bg.jpg") 0 0 repeat;
@@ -27,6 +35,14 @@ body {
 	margin: 0 auto;
 }
 
+.organograma {
+	margin: 0 auto;
+}
+
+/***************************************************************************
+    Título da Página
+   ***************************************************************************/
+
 .wrap-titulo-pagina > h1 {
 	font-size: 28px;
 	margin: 20px auto;
@@ -37,9 +53,9 @@ body {
 	padding: 3px 0;
 }
 
-.organograma {
-	margin: 0 auto;
-}
+/***************************************************************************
+    Botões de Zoom
+***************************************************************************/
 
 .organograma .zoom {
 	cursor: pointer;
@@ -79,6 +95,10 @@ body {
 	display: block;
 }
 
+/***************************************************************************
+     Ramos
+***************************************************************************/
+
 .organograma .organograma-exemplo-base ul,
 .organograma .organograma-exemplo-base {
 	margin: 0;
@@ -90,6 +110,10 @@ body {
 	display: none;
 }
 
+/***************************************************************************
+    Infos dos blocos
+   ***************************************************************************/
+
 .organograma .nome {
 	margin-bottom: 5px;
 }
@@ -98,6 +122,10 @@ body {
 	font-weight: bold;
 	font-style: italic;
 }
+
+/***************************************************************************
+    Estrutura
+***************************************************************************/
 
 .organograma > .organograma-exemplo-base li {
 	z-index: -1;
@@ -111,13 +139,17 @@ body {
 	padding: 40px 0 0;
 }
 
+/***************************************************************************
+    Estrutura - Conectores
+***************************************************************************/
+
 .organograma li:before {
 	content: '';
 	position: absolute;
 	top: 0;
 	right: 50%;
-	border-top: 1px solid #DBDBDB;
-	width: 50%;
+	border-top: 1px solid #DBDBDB; /* Renderizado como zero no IE8 */
+	width: 50%; /* Causador do bug da barra direita no IE8 */
 	height: 40px;
 }
 
@@ -133,6 +165,8 @@ body {
 	height: 40px;
 }
 
+/* Remoção dos conectores da esquerda-direita dos elementos sem nenhum irmão */
+
 .organograma .filho-unico:after {
 	display: none;
 }
@@ -141,9 +175,13 @@ body {
 	display: none;
 }
 
+/* Remoção de espaço do topo de filho único */
+
 .organograma .filho-unico {
 	padding: 0;
 }
+
+/* Remoção do conector esquerdo do primeiro filho e conector direito do último */
 
 .organograma li:first-child:before {
 	border: 0 none;
@@ -152,6 +190,8 @@ body {
 .organograma .ultimo-filho:after {
 	border: 0 none;
 }
+
+/* Retorno do conector vertical para os últimos nós. */
 
 .organograma .ultimo-filho:before {
 	border-right: 1px solid #DBDBDB;
@@ -162,6 +202,8 @@ body {
 	border-radius: 5px 0 0 0;
 }
 
+/* Retorno do conector dos pais */
+
 .organograma ul ul:before {
 	content: '';
 	position: absolute;
@@ -171,6 +213,8 @@ body {
 	width: 0;
 	height: 40px;
 }
+
+/* Demais estilos */
 
 .organograma .wrap-infos {
 	border: 1px solid #DBDBDB;

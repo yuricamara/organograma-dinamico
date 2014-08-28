@@ -346,14 +346,15 @@ var jsonOrgan = [{
     "pai": 54
 }];
 
-/***************************************************************************
-    Criação do fluxograma no DOM
-***************************************************************************/
 
 var $organogramaEx = $("#organograma-exemplo"),
     fnShowHide,
     fnOffset,
     fnTamanhoHorizontal;
+
+/***************************************************************************
+    Criação do fluxograma no DOM
+***************************************************************************/
 
 (function createDOM() {
     var ul, li, div, docfrag, i = 0;
