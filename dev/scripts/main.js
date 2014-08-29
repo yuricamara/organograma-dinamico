@@ -1,3 +1,7 @@
+/***************************************************************************
+    Exemplo JSON vindo do Server
+***************************************************************************/
+
 var jsonOrgan = [{
     "id": 15,
     "cargo": "Presidente",
@@ -342,10 +346,15 @@ var jsonOrgan = [{
     "pai": 54
 }];
 
+
 var $organogramaEx = $("#organograma-exemplo"),
     fnShowHide,
     fnOffset,
     fnTamanhoHorizontal;
+
+/***************************************************************************
+    Criação do fluxograma no DOM
+***************************************************************************/
 
 (function createDOM() {
     var ul, li, div, docfrag, i = 0;
@@ -355,16 +364,44 @@ var $organogramaEx = $("#organograma-exemplo"),
                 docfrag = document.createDocumentFragment();
                 i++;
                 if (i > 2) {
-                    div = document.createElement("div");
-                    div.setAttribute("class", "zoom mais");
-                    docfrag.appendChild(div)
+                    //var divZoom
+                    //<div class="zoom mais"></div>
+                    divZoom = document.createElement("div");
+                    divZoom.setAttribute("class", "zoom mais");
+
+                    //var divBarraHorizontal
+                    //<div class="barrahorizontal"></div>
+                    divBarraHorizontal = document.createElement("div");
+                    divBarraHorizontal.setAttribute("class","barrahorizontal");
+                    divZoom.appendChild(divBarraHorizontal);
+
+                    //var divBarraVertical
+                    //<div class="barravertical"></div>
+                    divBarraVertical = document.createElement("div");
+                    divBarraVertical.setAttribute("class","barravertical");
+                    divZoom.appendChild(divBarraVertical);
+
+                    //var divZoom
+                    // <div class="zoom mais">
+                        // <div class="barrahorizontal"></div>
+                        // <div class="barravertical"></div>
+                    // </div>
+
+                    docfrag.appendChild(divZoom)
                 }
+
+                //var ul
+                //<ul id="ul-" + jsonOrgan[property].pai" class="hide"></ul>
                 ul = document.createElement("ul");
                 ul.setAttribute("id", "ul-" + jsonOrgan[property].pai);
                 ul.setAttribute("class", "hide");
                 docfrag.appendChild(ul);
+
                 document.getElementById("li-" + jsonOrgan[property].pai).appendChild(docfrag)
             }
+
+            //var li
+            //<li id="li-" + jsonOrgan[property].idcargo></li>
             li = document.createElement("li");
             li.setAttribute("id", "li-" + jsonOrgan[property].idcargo);
             document.getElementById("ul-" + jsonOrgan[property].pai).appendChild(li).innerHTML = '<div class="wrap-infos wrap-infos-padrao">' + '<p class="nome">' + jsonOrgan[property].nome + "</p>" + '<p class="cargo">' + jsonOrgan[property].cargo + "</p>" + "</div>"
@@ -372,10 +409,14 @@ var $organogramaEx = $("#organograma-exemplo"),
     }
 })();
 
+/***************************************************************************
+    Tamanho horizontal (scrollbar) da tela
+ ***************************************************************************/
+
 fnTamanhoHorizontal = function () {
     var l = [];
     $organogramaEx
-        .css("width", 1e4);
+        .css("width", 10000);
     $organogramaEx
         .find("ul")
         .not(".hide")
@@ -389,6 +430,10 @@ fnTamanhoHorizontal = function () {
     $organogramaEx
         .css("width", l.pop())
 }
+
+/***************************************************************************
+    Click nos Botões de Zoom
+***************************************************************************/
 
 fnShowHide = function(element) {
     element
@@ -405,7 +450,10 @@ fnShowHide = function(element) {
 };
 
 
-//Colocar elemento selecionado o mais próximo possível do centro da tela
+/***************************************************************************
+    Alinhando o ramo ativo mais próximo do centro da tela.
+   ***************************************************************************/
+
 fnOffset = function($btn) {
     var l, t;
     l = $btn
@@ -439,19 +487,20 @@ $("#organograma-infos").find(".zoom").each(function() {
     })
 });
 
+/***************************************************************************
+    Seletores Adicionais
+   ***************************************************************************/
+
 $(".organograma li:last-child")
 	.addClass("ultimo-filho");
 $(".organograma li:only-child")
 	.addClass("filho-unico");
+
+/***************************************************************************
+    Ramos a mostrar logo após carregamento da página
+   ***************************************************************************/
+
 $("#ul-1,#ul-2")
 	.removeClass("hide");
 
 fnTamanhoHorizontal();
-
-$(".organograma-infos-base .zoom").on("click", function() {
-    $(".organograma-infos-base")
-        .toggleClass("width-auto")
-});
-
-$("aside.organograma")
-	.show();
