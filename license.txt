@@ -1,0 +1,20 @@
+  Este arquivo é parte do programa Organograma Dinâmico
+  Copyright © 2014-2016 Yuri Câmara de Mello Fernandes
+  
+  O programa Organograma Dinâmico é um Software Livre.
+  Você pode usá-lo, modificá-lo e/ou distribuí-lo a terceiros,
+em sua forma original ou modificada, desde que respeite os
+termos da versão 3 (ou posterior) da Licença Pública
+Geral (GPLv3)publicada Free Software Foundation.
+
+  Este programa é distribuído na esperança de que possa ser útil,
+mas SEM NENHUMA GARANTIA; sem uma garantia implícita de ADEQUAÇÃO
+a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a
+Licença Pública Geral GNU para maiores detalhes.
+
+  Você deve ter recebido uma cópia da Licença Pública Geral GNU
+junto com este programa. Caso contrário, escreva para:
+contato@yuricamara.com.br 
+
+  Alternativamente, você poderá obter uma cópia da licença
+em: http://www.gnu.org/licenses/.
