@@ -22,6 +22,6 @@ Desenvolvedor (Front-end)
 
 ***Yuri Câmara*** ( [yuricamara.com.br][2] / [@ycamara][3])
 
-  [1]: http://organograma.yuricamara.com.br "Demo da app"
+  [1]: http://yuricamara.com.br/organograma-dinamico "Demo da app"
   [2]: http://www.yuricamara.com.br "Site pessoal"
   [3]: https://twitter.com/ycamara "Twitter"
