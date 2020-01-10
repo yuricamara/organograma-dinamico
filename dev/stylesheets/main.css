@@ -35,6 +35,29 @@ body {
 	margin: 0 auto;
 }
 
+@media (max-width: 960px){
+	.organograma{
+		transform: scale(1.2);
+	}
+}
+@media (max-width: 700px){
+	.organograma{
+		transform: scale(1.5);
+	}
+}
+
+@media (max-width: 560px){
+	.organograma{
+		transform: scale(2);
+	}
+}
+
+@media (max-width: 460px){
+	.organograma{
+		transform: scale(2.5);
+	}
+}
+
 .organograma {
 	margin: 0 auto;
 }

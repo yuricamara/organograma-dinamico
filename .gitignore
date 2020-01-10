@@ -2,4 +2,5 @@
 *.sublime-workspace
 dist/
 *.map
+.idea/
 

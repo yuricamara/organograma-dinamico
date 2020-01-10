@@ -5,13 +5,13 @@
 var jsonOrgan = [{
     "id": 15,
     "cargo": "Presidente",
-    "nome": "Talita Aquino",
+    "nome": "Yuri Câmara",
     "idcargo": 1,
     "pai": 0
 }, {
     "id": 16,
     "cargo": "Vice-Presidente",
-    "nome": "Arnaldo Amésio",
+    "nome": "Talita Aquino",
     "idcargo": 2,
     "pai": 1
 }, {
