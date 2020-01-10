@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="description" content="Demo de app que constrói um organograma dinâmico a partir de um JSON">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="/main.css">
         <!--[if lt IE 9]>
-              <script src="browsers/IE/html5shiv.min.js"></script>
+        <script src="/plugins/html5shiv.min.js"></script>
         <![endif]-->
         <noscript>
             <style type="text/css">
@@ -42,8 +42,10 @@
         </noscript>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <script>
-            !window.jQuery && document.write('<script src="vendors/jquery-1.11.1.min.js"><\/script>')
+            !window.jQuery && document.write('<script src="/plugins/jquery-1.11.1.min.js"><\/script>')
         </script>
-        <script src="scripts/main.js"></script>
+        <!-- build:js /main.min.js -->
+        <script src="/scripts/main.js"></script>
+        <!-- endbuild -->
     </body>
 </html>
