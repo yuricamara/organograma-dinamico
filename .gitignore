@@ -1,6 +1,3 @@
-*.sublime-project
-*.sublime-workspace
-dist/
-*.map
+node_modules/
 .idea/
 
