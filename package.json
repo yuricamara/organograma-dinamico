@@ -11,7 +11,7 @@
     "browser-sync": "^2.14.0",
     "del": "^2.2.2",
     "eslint-config-google": "^0.3.0",
-    "gulp": "3.9.0",
+    "gulp": "4.0.2",
     "gulp-babel": "^6.1.2",
     "gulp-cache": "^0.4.5",
     "gulp-concat": "^2.6.0",
