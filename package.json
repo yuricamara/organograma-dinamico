@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "apache-server-configs": "^2.14.0",
-    "browser-sync": "^2.14.0",
+    "browser-sync": "^2.27.10",
     "del": "^2.2.2",
     "eslint-config-google": "^0.3.0",
     "gulp": "3.9.0",
